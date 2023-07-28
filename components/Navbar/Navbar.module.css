@@ -1,0 +1,12 @@
+.container{
+    padding:30px 40px;
+    background-color: rgba(0,0,0,.4);
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    backdrop-filter:blur(6px);
+}
