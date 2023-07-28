@@ -26,7 +26,7 @@ const Search = () => {
             return errors;
           }}
           onSubmit={(values) => {
-            // O_-
+            handleGetShows(values.show);
           }}
         >
           {({
@@ -37,7 +37,7 @@ const Search = () => {
             handleBlur,
             handleSubmit,
           }) => (
-            <form onSubmit={onSubmit} /*onSubmit={handleSubmit}*/>
+            <form onSubmit={onSubmit}>
               <input
                 type="text"
                 placeholder="Enter a show name"
@@ -57,31 +57,3 @@ const Search = () => {
 };
 
 export default Search;
-
-/*
-import React, { useState } from 'react';
-import { useAppContext } from '../../contexts/AppContext';
-
-const Search = () => {
-  const { handleGetShows } = useAppContext();
-  const [query, setQuery] = useState('');
-
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    handleGetShows(query);
-  };
-
-  return (
-    <section>
-      <h2>Search your show</h2>
-      <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          placeholder="Enter a show name"
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-        />
-        <button type="submit">Search</button>
-      </form>
-    </section>
-    */
